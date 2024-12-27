@@ -15,13 +15,9 @@ fun main() {
     for (day in 1..25) {
         val dayString = day.toString().padStart(2, '0')
         val dayDir = File(baseDir, "day$dayString")
-        val inputFile = File(inputsDir, dayString)
 
         if (!dayDir.exists()) {
             dayDir.mkdirs()
-        }
-        if (!inputFile.exists()) {
-            inputFile.createNewFile()
         }
 
         val ktFile = File(dayDir, "Day${dayString}.kt")
